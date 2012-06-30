@@ -108,6 +108,19 @@ buster.testCase("sandboxed-fs", {
         }));
     },
 
+    "accessing relative path outside of sandbox": function (done) {
+        var fs = sbfs.createWhitelisted([this.defaultSandboxDir]);
+
+        var relativeOutsidePath = this.defaultSandboxDir + "/../sandboxed-fs-test.js"
+
+        assert(corefs.statSync(relativeOutsidePath));
+
+        fs.open(relativeOutsidePath, "r", done(function (err, fd) {
+            assertEnoentErr(err, relativeOutsidePath);
+            refute(fd);
+        }));
+    },
+
     "// watching inside sandbox": function (done) {
         assert(true);
         var testfile = __dirname + "/fixtures/sandbox/test.txt";
@@ -126,6 +139,7 @@ buster.testCase("sandboxed-fs", {
 
 
 function assertEnoentErr(err, expectedPath) {
+    assert(err);
     assert.equals(err.code, "ENOENT");
     assert.equals(err.errno, 34);
     assert.equals(err.path, expectedPath);

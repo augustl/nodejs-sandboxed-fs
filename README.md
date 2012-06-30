@@ -5,7 +5,6 @@ Identical API to the core `fs` module, but allows for whitelisting and blacklist
 ## TODO
 
 * Implement all the APIs.
-* Normalize relative paths
 
 ## Installing
 
