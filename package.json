@@ -1,0 +1,11 @@
+{
+    "name": "sandboxed-fs",
+    "version": "0.1",
+    "description": "Like the core 'fs', but whith path pased whitelisting and blacklisting",
+    "author": {
+        "name": "August Lilleaas",
+        "email": "august@augustl.com",
+        "url": "http://augustl.com"
+    },
+    "main": "./lib/sandboxed-fs",
+}
