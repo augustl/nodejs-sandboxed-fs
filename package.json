@@ -7,5 +7,5 @@
         "email": "august@augustl.com",
         "url": "http://augustl.com"
     },
-    "main": "./lib/sandboxed-fs",
+    "main": "./lib/sandboxed-fs"
 }
