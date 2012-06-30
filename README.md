@@ -2,6 +2,11 @@
 
 Identical API to the core `fs` module, but allows for whitelisting and blacklisting of certain paths. Can be used to provide sandboxed file system for VM sandboxes.
 
+## TODO
+
+* Implement all the APIs.
+* Normalize relative paths
+
 ## Installing
 
     npm install sandboxed-fs
