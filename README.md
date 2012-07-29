@@ -8,13 +8,7 @@ Identical API to the core `fs` module, but allows for whitelisting and blacklist
 
 ## Installing
 
-    npm install sandboxed-fs
-
-Or add it as a dependency to your package.json.
-
-    "dependencies": {
-        "sandboxed-fs": "0.1.x"
-    }
+This package is proof of concept and is not published to npmjs.org.
 
 ## Usage
 
